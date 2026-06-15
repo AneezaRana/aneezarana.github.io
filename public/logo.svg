@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brand" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CD8D2"/>
+      <stop offset="0.5" stop-color="#00bf8f"/>
+      <stop offset="1" stop-color="#302b63"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="20" y1="12" x2="44" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CD8D2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#302b63" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base -->
+  <rect width="64" height="64" rx="16" fill="#070b12"/>
+
+  <!-- Gradient border frame -->
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#brand)" stroke-width="2.5" fill="none" opacity="0.9"/>
+
+  <!-- Inner glow -->
+  <ellipse cx="32" cy="30" rx="22" ry="18" fill="url(#shine)"/>
+
+  <!-- AR monogram -->
+  <g filter="url(#glow)">
+    <!-- A -->
+    <path
+      d="M15.5 44.5L21.5 21.5L27.5 44.5H24.2L22.8 38.5H20.2L18.8 44.5H15.5Z"
+      fill="url(#brand)"
+    />
+    <!-- R -->
+    <path
+      d="M30.5 21.5H37.8C42.8 21.5 46.2 24.5 46.2 28.8C46.2 32.2 44.2 34.8 40.8 35.5L46.8 44.5H43.1L37.8 35.8H34.2V44.5H30.5V21.5ZM34.2 25.2V32.2H37.6C40.1 32.2 42 30.6 42 28.8C42 26.6 40.1 25.2 37.6 25.2H34.2Z"
+      fill="url(#brand)"
+    />
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="20" y="50" width="24" height="2.5" rx="1.25" fill="url(#brand)" opacity="0.85"/>
+</svg>
