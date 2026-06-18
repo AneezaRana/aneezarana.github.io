@@ -11,6 +11,7 @@ import {
 } from 'react-icons/hi';
 import { projects } from '../data/portfolioData';
 import ParticleCanvas from './ParticleCanvas';
+import Tilt3D from './Tilt3D';
 
 function ProjectImage({ src, title, onOpen }) {
   const [failed, setFailed] = useState(false);
@@ -152,7 +153,7 @@ export default function Projects() {
         </motion.h2>
 
         <div className="relative w-full max-w-5xl">
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <Tilt3D intensity={8} scale={1.02} glare className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl shadow-[#1cd8d2]/5">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.article
                 key={current.id}
@@ -217,7 +218,7 @@ export default function Projects() {
                 </div>
               </motion.article>
             </AnimatePresence>
-          </div>
+          </Tilt3D>
 
           <button
             type="button"

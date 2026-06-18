@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { personalInfo, stats } from '../data/portfolioData';
 import GradientOrbs from './GradientOrbs';
 import ParticleCanvas from './ParticleCanvas';
+import Tilt3D from './Tilt3D';
 
 export default function About() {
   const socials = [
@@ -23,9 +24,9 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row items-center md:items-stretch gap-8"
         >
-          <div className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1CD8D2]/20 to-[#302b63]/20 border border-[#1CD8D2]/25 shrink-0">
-            <img src="/profile1.jpg" alt={personalInfo.name} className="w-full h-full object-cover" />
-          </div>
+          <Tilt3D intensity={16} scale={1.06} glare className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1CD8D2]/20 to-[#302b63]/20 border border-[#1CD8D2]/25 shrink-0">
+            <img src="/profile1.jpg" alt={personalInfo.name} className="w-full h-full object-cover tilt-3d-inner" />
+          </Tilt3D>
 
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight gradient-text">
@@ -38,17 +39,18 @@ export default function About() {
 
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl mx-auto md:mx-0">
               {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center"
-                >
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                  <div className="text-base font-semibold text-white">{stat.value}</div>
-                </motion.div>
+                <Tilt3D key={stat.label} intensity={10} scale={1.05}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center"
+                  >
+                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-base font-semibold text-white">{stat.value}</div>
+                  </motion.div>
+                </Tilt3D>
               ))}
             </div>
 

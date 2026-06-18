@@ -9,11 +9,11 @@ function SkillRow({ items }) {
       {items.map((skill) => (
         <div
           key={skill}
-          className="flex flex-col items-center gap-2 w-[140px] shrink-0 mr-10"
+          className="flex flex-col items-center gap-2 w-[140px] shrink-0 mr-10 perspective-[500px]"
           aria-label={skill}
           title={skill}
         >
-          <span className="text-[#1cd8d2] hover:scale-125 transition-transform duration-300">
+          <span className="text-[#1cd8d2] skill-3d-icon inline-flex items-center justify-center w-14 h-14 rounded-xl border border-[#1cd8d2]/20 bg-white/5">
             <SkillIcon name={skill} />
           </span>
           <p className="text-sm text-white whitespace-nowrap">{skill}</p>

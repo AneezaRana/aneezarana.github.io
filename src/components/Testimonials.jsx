@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { testimonials } from '../data/portfolioData';
 import ParticleCanvas from './ParticleCanvas';
+import Tilt3D from './Tilt3D';
 
 const gridVariants = {
   hidden: {},
@@ -51,18 +52,15 @@ function Avatar({ name, src }) {
 
 function TestimonialCard({ item }) {
   return (
-    <motion.div
-      variants={cardVariants}
-      className="testimonial-card"
-      whileHover={{ rotate: -2, y: -6 }}
-      transition={{ type: 'spring', stiffness: 250, damping: 15 }}
-    >
-      <Avatar name={item.name} src={item.avatar} />
-      <p className="text-gray-300 leading-relaxed italic mb-6">
-        &ldquo;{item.quote}&rdquo;
-      </p>
-      <h3 className="text-lg font-bold text-white">{item.name}</h3>
-      <p className="text-sm text-gray-400 mt-1">{item.role}</p>
+    <motion.div variants={cardVariants}>
+      <Tilt3D intensity={10} scale={1.03} glare className="testimonial-card h-full">
+        <Avatar name={item.name} src={item.avatar} />
+        <p className="text-gray-300 leading-relaxed italic mb-6">
+          &ldquo;{item.quote}&rdquo;
+        </p>
+        <h3 className="text-lg font-bold text-white">{item.name}</h3>
+        <p className="text-sm text-gray-400 mt-1">{item.role}</p>
+      </Tilt3D>
     </motion.div>
   );
 }

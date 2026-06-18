@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter, FaYoutube, FaInstagram } from 'react
 import { personalInfo, typewriterRoles } from '../data/portfolioData';
 import ParticleCanvas from './ParticleCanvas';
 import GradientOrbs from './GradientOrbs';
+import HeroAvatar3D from './HeroAvatar3D';
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -102,25 +103,11 @@ export default function Hero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative hidden lg:block"
+          className="relative hidden lg:flex items-center justify-end"
         >
-          <div
-            className="absolute top-1/2 -translate-y-1/2 pointer-events-none"
-            style={{
-              right: 10,
-              width: 'min(22vw, 410px)',
-              height: 'min(40vw, 760px)',
-              borderRadius: '50%',
-              filter: 'blur(38px)',
-              opacity: 0.32,
-              background: 'conic-gradient(rgb(28, 216, 210), rgb(0, 191, 143), rgb(48, 43, 99), rgb(28, 216, 210))',
-            }}
-          />
-          <img
+          <HeroAvatar3D
             src="/avator.png"
             alt={`${personalInfo.name} avatar`}
-            className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none animate-float"
-            style={{ right: -30, width: 'min(45vw, 780px)', maxHeight: '90vh' }}
           />
         </motion.div>
       </div>

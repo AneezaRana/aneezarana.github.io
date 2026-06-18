@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { HiBriefcase } from 'react-icons/hi';
 import { experience } from '../data/portfolioData';
 import ParticleCanvas from './ParticleCanvas';
+import Tilt3D from './Tilt3D';
 
 const listVariants = {
   hidden: {},
@@ -26,7 +27,7 @@ function ExperienceEntry({ item, index, isLast }) {
         <span className="exp-entry__dot" />
       </div>
 
-      <article className="exp-entry__card">
+      <Tilt3D intensity={6} scale={1.02} glare className="exp-entry__card">
         <div className="exp-entry__header">
           <span className="exp-entry__index">{String(index + 1).padStart(2, '0')}</span>
           <span className="exp-entry__period">{item.period}</span>
@@ -39,7 +40,7 @@ function ExperienceEntry({ item, index, isLast }) {
         <h3 className="exp-entry__role">{item.role}</h3>
         <p className="exp-entry__company">{item.company}</p>
         <p className="exp-entry__desc">{item.description}</p>
-      </article>
+      </Tilt3D>
     </motion.li>
   );
 }

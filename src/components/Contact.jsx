@@ -127,9 +127,9 @@ export default function Contact() {
               required
               className="px-4 py-3 rounded-lg bg-black/30 border border-white/10 text-white focus:border-[#1cd8d2] focus:outline-none transition"
             >
-              <option value="" disabled>Something in mind?</option>
+              <option value="" disabled hidden style={{ backgroundColor: "#000", color: "#9ca3af" }}>Something in mind?</option>
               {serviceOptions.slice(1).map((opt) => (
-                <option key={opt} value={opt}>{opt}</option>
+                <option key={opt} value={opt} style={{ backgroundColor: "#000", color: "#fff" }}>{opt}</option>
               ))}
             </select>
           </label>

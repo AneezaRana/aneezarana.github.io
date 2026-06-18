@@ -76,6 +76,54 @@ section[id] {
   animation: float 4s ease-in-out infinite;
 }
 
+.tilt-3d {
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+.tilt-3d-inner {
+  transform: translateZ(30px);
+  transform-style: preserve-3d;
+}
+
+.hero-avatar-stage {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 6rem);
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.hero-avatar-layer {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-avatar-img {
+  width: min(45vw, 780px);
+  max-height: 85vh;
+  margin-right: -30px;
+  transform: translateZ(40px);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 24px 48px rgba(28, 216, 210, 0.15));
+}
+
+.hero-avatar-shadow {
+  transform-style: preserve-3d;
+  filter: blur(28px);
+  opacity: 0.42;
+  will-change: transform;
+}
+
+.skill-3d-icon {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+}
+
+.skill-3d-icon:hover {
+  transform: translateZ(18px) scale(1.15);
+}
+
 .gradient-text {
   background: linear-gradient(to right, #1cd8d2, #00bf8f, #302b63);
   -webkit-background-clip: text;
@@ -237,7 +285,6 @@ section[id] {
 }
 
 .exp-entry__card:hover {
-  transform: translateX(6px);
   border-color: rgba(28, 216, 210, 0.28);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }

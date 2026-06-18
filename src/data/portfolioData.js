@@ -83,7 +83,7 @@ export const experience = [
     company: 'Swipbox Pakistan',
     period: '04/2023 - 04/2024',
     description:
-      'Developed modern and responsive user interfaces using Angular with a clean and maintainable TypeScript architecture. Enhanced user experience by leveraging Bootstrap, Sass, and Tailwind CSS to create visually appealing and performant applications. Built reusable services and shared modules to improve code consistency, scalability, and maintainability across projects. Actively participated in agile development processes, including sprint planning, daily stand-ups, and retrospective sessions, contributing to effective team collaboration and continuous improvement. Followed industry best practices by utilizing tools such as Prettier and ESLint to ensure clean, consistent, and high-quality code.',
+      'Developed modern and responsive user interfaces using Angular with a clean and maintainable TypeScript architecture. Enhanced user experience by leveraging Bootstrap, Sass, and Tailwind CSS to create visually appealing and high-performing applications. Built reusable services and shared modules to improve code consistency, scalability, and maintainability across projects. Implemented localization and internationalization (i18n) features to support multiple languages and provide a seamless experience for users across different regions. Actively participated in agile development processes, including sprint planning, daily stand-ups, and retrospective sessions, contributing to effective team collaboration and continuous improvement. Followed industry best practices by utilizing tools such as Prettier and ESLint to ensure clean, consistent, and high-quality code.',
   },
   {
     role: 'Frontend Developer',
