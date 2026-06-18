@@ -1,6 +1,7 @@
-# Gaurav Portfolio Clone
+# 3D animated Portfolio
 
-A React clone of [gauravbits.in](https://gauravbits.in/) — a professional full-stack developer portfolio with animations, dark theme, and modern UI.
+A React 3D animated Portfolio
+ — a professional Frontend developer portfolio with animations, 3D elements, dark theme, and modern UI.
 
 ## Features
 
